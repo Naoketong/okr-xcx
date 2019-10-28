@@ -1,6 +1,36 @@
-<!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<view class="container">
+  <view class="page-content">
+    <view class="objective-item finished" hover-class="objective-item--hover" bindtap="handleObjectiveActionSheet" >
+      <view class="objective-title">我想几天打三十次豆豆</view>
+      <view class="objective-created_time">· 创建时间：2019/10/28 16:15</view>
+      <view class="objective-created_time">· 完成时间：2019/10/28 16:55</view>
+    </view>
+    <view class="keyresult-list" >
+      <view class="keyresult-item finished" hover-class="keyresult-item--hover" >
+        <view class="keyresult-info">
+          <view class="keyresult-title">出拳速度提高30%</view>
+          <view class="keyresult-tag">已完成</view>
+        </view>
+        <view class="todos-list">
+          <view class="todo-item">
+            <view class="todo-title finished">· 你打的浪费撒娇分类的</view>
+          </view>
+        </view>
+      </view>
+      <view class="keyresult-item" hover-class="keyresult-item--hover" >
+        <view class="keyresult-info">
+          <view class="keyresult-title">提前感知到豆豆的躲避方向</view>
+          <view class="keyresult-tag"> 点击标记 </view>
+        </view>
+        <view class="todos-list">
+          <view class="todo-item">
+            <view class="todo-title">· 你打的浪费撒娇分类的</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="page-footer">
+    <navigator url="/pages/okr_edit/okr_edit?id={{id}}" class="edit-btn" hover-class="edit-btn_hover">编辑</navigator>
+  </view> -->
 </view>

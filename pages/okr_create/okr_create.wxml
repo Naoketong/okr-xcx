@@ -1,6 +1,20 @@
-<!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<view class="container">
+	<view class="form">
+		<view class="form-item">
+			<view class="form-title">dongzhoa 目标:</view>
+			<input type="text" class="form-input" placeholder="请输入你的目标"/>
+			<view class="form-ctrl">+</view>
+		</view>
+
+
+		<view class="form-item">
+			<view class="form-title">dongzhoa 成果:</view>
+			<input type="text" class="form-input" placeholder="请输入你的目标"/>
+			<view class="form-ctrl">-</view>
+		</view>
+	</view>
+
+	<view class="footer">
+    <button class="submit-btn" hover-class="submit-btn_hover" bindtap="handleSubmit">新增</button>
+  </view>
 </view>
