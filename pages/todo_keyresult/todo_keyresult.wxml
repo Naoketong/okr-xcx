@@ -1,0 +1,8 @@
+<view class="container">
+	<view class="title">请选择关键 KR （ KeyResult ) 进行绑定</view>
+	<view class="key-list">
+		<view class="key-title">目标：我想几天打三十次豆豆</view>
+		<view class="key-item active">出拳速度提高30%</view>
+		<view class="key-item">提前感知到豆豆的躲避方向</view>
+	</view>
+</view>

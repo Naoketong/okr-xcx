@@ -1,0 +1,15 @@
+<view class="container">
+	<view class="title">已经完成的Todos， 你真棒，比金箍棒还棒</view>
+	<view class="todo-list">
+		<view class="todo-item accomplish">
+			<view class="item-title">吃饭饭</view>
+			<view class="item-created_time">· 创建时间： 2019/10/28 14:20</view>
+			<view class="item-created_time">· 完成时间： 2019/10/28 14:55</view>
+		</view>
+		<view class="todo-item">
+			<view class="item-title">睡觉觉</view>
+			<view class="item-created_time">· 创建时间： 2019/10/28 14:20</view>
+			<view class="item-created_time">· 完成时间： 2019/10/28 14:55</view>
+		</view>
+	</view>
+</view>
