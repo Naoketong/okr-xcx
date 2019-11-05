@@ -32,3 +32,6 @@
 	font-size: 12px;
 	color: #999;
 }
+.todo-created_time span{
+	color: #ff6700;
+}

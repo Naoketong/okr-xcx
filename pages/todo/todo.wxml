@@ -1,15 +1,17 @@
 <view class="container">
 	<view class="sub">你必须做你不得不做的事</view>
 	<view class="content">
-		<input class="todo-input" type="text"  placeholder="请输入你需要完成的事情"/>
+		<input class="todo-input" type="text"  placeholder="请输入你需要完成的事情" 
+			bindconfirm="handInput" value="{{value}}"/>
 		<view class="todo-list">
 
-	    <view class="todo-item">
-	      <view class="todo-title">吃饭饭</view>
-	      <view class="todo-created_time">· 创建时间：2019/10/28 14:18.20</view>
+	    <view class="todo-item" wx:for="{{ todos }}" wx:key="{{item.id}}"
+	    	bindtap="hadnButton" data-id="{{item.id}}" data-index="{{index}}">
+	      <view class="todo-title">{{item.content}}</view>
+	      <view class="todo-created_time"><span>· 创建时间：</span>{{item.start_at}}</view>
 	    </view>
 
-	    <view class="todo-item">
+	    <!-- <view class="todo-item">
 	      <view class="todo-title">睡觉觉</view>
 	      <view class="todo-created_time">· 创建时间：2019/10/28 14:18.20</view>
 	    </view>
@@ -17,7 +19,7 @@
 	    <view class="todo-item">
 	      <view class="todo-title">打豆豆</view>
 	      <view class="todo-created_time">· 创建时间：2019/10/28 14:18.20</view>
-	    </view>
+	    </view> -->
 
 	  </view>
 	</view>

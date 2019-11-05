@@ -88,8 +88,25 @@
   color: #fff;
   font-size: 18px;
   border-radius: 0;
+  text-align: center;
 }
 
 .login-btn_hover{
   opacity: .8;
+}
+
+.objective-item{
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 6px;
+}
+.keyresult-item{
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 6px;
+}
+.todo-item{
+  font-size: 12px;
+  color: #333;
+  margin-bottom: 6px;
 }

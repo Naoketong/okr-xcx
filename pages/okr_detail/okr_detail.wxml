@@ -25,6 +25,7 @@
         <view class="todos-list">
           <view class="todo-item">
             <view class="todo-title">· 你打的浪费撒娇分类的</view>
+            <view class="todo-title">· 你打的浪费撒娇分类的</view>
           </view>
         </view>
       </view>
