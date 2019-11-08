@@ -17,12 +17,12 @@
 	transform: rotate(-45deg);
 	width: 80px;
 	height: 80px;
-	border:2px solid #999;	
+	border:2px solid #ff6700;	
 	content: '完成';
 	line-height: 78px;
 	text-align: center;
 	font-size: 22px;
-	color: #999;
+	color: #ff6700;
 	border-radius: 50%;
 	opacity: .5;
 
@@ -38,4 +38,7 @@
 .item-created_time{
   font-size: 12px;
   color: #999;
+}
+.item-created_time span{
+	color: #ff6700;
 }

@@ -3,14 +3,14 @@
 		<view class="form-item">
 			<view class="form-title">dongzhoa 目标:</view>
 			<input type="text" class="form-input" placeholder="请输入你的目标"/>
-			<view class="form-ctrl">+</view>
+			<view class="form-ctrl" hover-class="form-ctrl_hover" bindtap="itemAdd">+</view>
 		</view>
 
 
 		<view class="form-item">
 			<view class="form-title">dongzhoa 成果:</view>
 			<input type="text" class="form-input" placeholder="请输入你的目标"/>
-			<view class="form-ctrl">-</view>
+			<view class="form-ctrl" hover-class="form-ctrl_hover" bindtap="itemWipe">-</view>
 		</view>
 	</view>
 

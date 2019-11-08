@@ -5,7 +5,7 @@
 }
 .key-title{
 	font-size: 16px;
-	color: #666;
+	color: #ff6700;
 	margin-bottom: 10px;
 }
 .key-item{
@@ -14,7 +14,7 @@
 	margin-bottom: 10px;
 	padding:5px;
 	border:1px solid #333;
-	color: #666;
+	color: #ff6700;
 }
 .key-item.active{
 	background-color: #333;
