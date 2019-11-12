@@ -3,6 +3,8 @@ export default{
 	test: PREFIX + '/test',
 	todo: PREFIX + '/todo',
 	todoItem: (id) => `${PREFIX}/todo/${id}`,
+	okr: PREFIX + '/okr',
+	okrItem: (id) => `${PREFIX}/okr/${id}`,
 
 }
 

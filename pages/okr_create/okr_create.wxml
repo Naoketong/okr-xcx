@@ -1,16 +1,17 @@
-<view class="container">
+ <view class="container">
 	<view class="form">
 		<view class="form-item">
 			<view class="form-title">dongzhoa 目标:</view>
-			<input type="text" class="form-input" placeholder="请输入你的目标"/>
+			<input type="text" class="form-input" placeholder="请输入你的目标" bindinput="titleInput"/>
 			<view class="form-ctrl" hover-class="form-ctrl_hover" bindtap="itemAdd">+</view>
 		</view>
 
 
-		<view class="form-item">
+		<view class="form-item" wx:for = "{{keyresults}}">
 			<view class="form-title">dongzhoa 成果:</view>
-			<input type="text" class="form-input" placeholder="请输入你的目标"/>
-			<view class="form-ctrl" hover-class="form-ctrl_hover" bindtap="itemWipe">-</view>
+			<input type="text" class="form-input" placeholder="请输入你的目标" data-index="{{index}}" bindinput="contentInput"/>
+			<view class="form-ctrl" hover-class="form-ctrl_hover" bindtap="itemWipe"
+				data-index="{{index}}">-</view>
 		</view>
 	</view>
 
