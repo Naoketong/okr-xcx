@@ -7,7 +7,7 @@ Page({
   onShow: function() {
     Todo.index({state: 1}).then(res => {
       this.setData({todos: res.todos})
-      // console.log(res.todos)
+      console.log(res.todos)
     })
   },
   handButton:function(event){

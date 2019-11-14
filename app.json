@@ -1,11 +1,13 @@
 {
-  "pages": ["pages/okr_create/okr_create",
+  "pages": ["pages/welcome/welcome",
+    "pages/okr_edit/okr_edit",
+    "pages/okr_create/okr_create",
     "pages/history/history",
     "pages/todo/todo",
-    "pages/welcome/welcome",
+    
     "pages/todo_keyresult/todo_keyresult",
+    
     "pages/okr/okr",
-    "pages/okr_edit/okr_edit",
     
     "pages/okr_detail/okr_detail"
     

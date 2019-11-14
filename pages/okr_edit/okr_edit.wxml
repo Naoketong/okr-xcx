@@ -2,21 +2,22 @@
 	<view class="form">
 		<view class="form-item">
 			<view class="form-title">dongzhoa 目标:</view>
-			<input type="text" class="form-input" placeholder="我想几天打三十次豆豆"/>
-			<view class="form-ctrl">+</view>
+			<input type="text" class="form-input" placeholder="我想几天打三十次豆豆"
+			bindinput="titleInput"	/>
+			<view class="form-ctrl" bindtap="itemAdd">+</view>
 		</view>
 
 
-		<view class="form-item">
+		<view class="form-item" wx:for="{{keyresults}}">
 			<view class="form-title">dongzhoa 成果:</view>
-			<input type="text" class="form-input" placeholder="出拳速度提高30%"/>
-			<view class="form-ctrl">-</view>
+			<input type="text" class="form-input" placeholder="出拳速度提高30%" bindinput="contentInput"/>
+			<view class="form-ctrl" bindtap="itemWipe">-</view>
 		</view>
-		<view class="form-item">
+		<!-- <view class="form-item">
 			<view class="form-title">dongzhoa 成果:</view>
 			<input type="text" class="form-input" placeholder="提前感知到豆豆的躲避方向"/>
 			<view class="form-ctrl">-</view>
-		</view>
+		</view> -->
 	</view>
 
 	<view class="footer">

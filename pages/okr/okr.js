@@ -1,9 +1,14 @@
-
+import Okr from './../../models/okr.js';
+import Objective from './../../models/objective.js';
 Page({
   data: {
+    objectives: []
   },
-  onLoad: function () {
-    
+  onShow: function () {
+    Okr.index({}).then((res)=>{
+      this.setData({ objectives: res.objectives })
+    })
+    console.log(this.data.objectives)
   },
   hadnButton:function(event){
     let id = event.currentTarget.dataset.id;

@@ -30,8 +30,12 @@ Page({
         if(tapIndex == 0){
           wx.navigateTo({url:'/pages/todo_keyresult/todo_keyresult?id=' + id })
         }else if(tapIndex == 1){
-          Todo.update(id,{state:1}).then(res=>{
-            console.log(res)
+          let end_at = formatTime(new Date())
+          console.log(end_at)
+          Todo.update(id,{state:1,end_at:end_at}).then(res=>{
+            let todos = this.data.todos;
+            todos.splice(index,1)
+            this.setData({ todos })
           })
         }else if(tapIndex == 2){
           wx.showModal({
