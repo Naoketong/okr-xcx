@@ -5,7 +5,7 @@
 			bindconfirm="handInput" value="{{value}}"/>
 		<view class="todo-list">
 
-	    <view class="todo-item" wx:for="{{ todos }}" wx:key="{{item.id}}"
+	    <view class="todo-item" wx:for="{{ todos }}" wx:if="{{item.state == 0}}" wx:key="{{item.id}}"
 	    	bindtap="hadnButton" data-id="{{item.id}}" data-index="{{index}}">
 	      <view class="todo-title">{{item.content}}</view>
 	      <view class="todo-created_time"><span>· 创建时间：</span>{{item.start_at}}</view>

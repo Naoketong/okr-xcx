@@ -1,4 +1,5 @@
 import Okr from './../../models/okr.js';
+import Keyresult from './../../models/keyresult.js';
 
 Page({
   data: {
@@ -7,7 +8,15 @@ Page({
       content:'',
     }],
   },
-  onLoad: function () {
+  onLoad: function (opt) {
+    let id = opt.id;
+    console.log(id)
+    Okr.show(id).then(res => {
+      console.log(res)
+      let objective = res.objective;
+      let keyresults = res.keyresults;
+      this.setData({ objective,keyresults, id })
+    })
   },
   itemAdd:function(){
     let keyresults = this.data.keyresults;
@@ -17,6 +26,12 @@ Page({
   itemWipe: function(e){
     let index = e.currentTarget.dataset.index;
     let keyresults = this.data.keyresults;
+    let id = e.currentTarget.dataset.id;
+    Keyresult.delete(id).then((res)=>{
+      keyresults.splice(index,1)
+      this.setData({ keyresults })
+    })
+
     if(keyresults.length > 1){
       keyresults.splice(index,1)
     }else{
@@ -32,9 +47,9 @@ Page({
   },
 
   titleInput:function(e){
-    let title = e.detail.value;
-    this.setData({ objective: title })
-    
+    let value = e.detail.value;
+    this.setData({ objective: value })
+    // console.log(title)
   },
   contentInput:function(e){
     let content = e.detail.value;
@@ -46,7 +61,6 @@ Page({
   handleSubmit:function(){
     let title = this.data.objective;
     let content = this.data.keyresults;
-    console.log(title,content)
     if(!title || !content.length){
       wx.showToast({
         title: '目标和成果为必填项目',
@@ -56,9 +70,12 @@ Page({
       })
       return
     }
-    let data = {title,content};
-    Okr.update(data).then((res)=>{
-      console.log(res)
+
+    let id = this.data.id;
+    let data = { title: title}
+    data.content = content;
+    console.log(data)
+     Okr.update(id, data).then(res => {
       wx.showToast({
         title: '成功',
         icon: 'success',
@@ -71,6 +88,5 @@ Page({
     })
   },
 
-
-
+  
 })

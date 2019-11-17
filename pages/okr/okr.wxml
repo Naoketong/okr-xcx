@@ -1,10 +1,16 @@
 <view class="container">
 	<navigator url="/pages/okr_create/okr_create" class="todo-link">添加OKR</navigator>
 	<view class="okr-list">
-		<view class="okr-item accomplish" bindtap="hadnButton">
-			<view class="item-title">我想几天睡三十次觉</view>
-			<view class="item-created_time">2019/10/28 15:06:25</view>
-			<view class="item-created_time">2019/10/28 15:06:25</view>
+		<view class="okr-item {{item.state == 1 ? 'accomplish' : ''}}" 
+			wx:for="{{ objectives }}"
+			wx:key="{{item.id}}"
+			data-id="{{item.id}}" 
+			data-index="{{index}}"
+			data-state="{{item.state}}"
+			bindtap="hadnButton">
+			<view class="item-title">{{item.title}}</view>
+			<view class="item-created_time">{{item.start_at}}</view>
+			<view class="item-created_time" wx:if="{{item.end_at}}">{{item.end_at}}</view>
 		</view>
 		<!-- <view class="okr-item">
 			<view class="item-title">我想几天打三十次豆豆</view>

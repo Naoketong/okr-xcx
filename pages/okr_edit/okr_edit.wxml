@@ -2,17 +2,30 @@
 	<view class="form">
 		<view class="form-item">
 			<view class="form-title">dongzhoa 目标:</view>
-			<input type="text" class="form-input" placeholder="我想几天打三十次豆豆"
+			<input type="text" class="form-input"  placeholder="请输入你的目标"
 			bindinput="titleInput"	/>
 			<view class="form-ctrl" bindtap="itemAdd">+</view>
 		</view>
 
 
-		<view class="form-item" wx:for="{{keyresults}}">
+		<view class="form-item" wx:for="{{ keyresults }}" wx:key="{{index}}">
 			<view class="form-title">dongzhoa 成果:</view>
-			<input type="text" class="form-input" placeholder="出拳速度提高30%" bindinput="contentInput"/>
-			<view class="form-ctrl" bindtap="itemWipe">-</view>
+			<input type="text" 
+				class="form-input" 
+				placeholder="请输入你的目标" 
+				data-index="{{index}}"
+				value="{{item.content}}"
+				bindinput="contentInput"/>
+			<view class="form-ctrl"  data-id="{{item.id}}" bindtap="itemWipe">-</view>
 		</view>
+
+
+		<!-- <view class="form-item" wx:for = "{{keyresults}}">
+			<view class="form-title">dongzhoa 成果:</view>
+			<input type="text" class="form-input" placeholder="请输入你的目标" data-index="{{index}}" bindinput="contentInput"/>
+			<view class="form-ctrl" hover-class="form-ctrl_hover" bindtap="itemWipe"
+				data-index="{{index}}">-</view>
+		</view> -->
 		<!-- <view class="form-item">
 			<view class="form-title">dongzhoa 成果:</view>
 			<input type="text" class="form-input" placeholder="提前感知到豆豆的躲避方向"/>

@@ -8,7 +8,8 @@ export default{
 	okrItem: (id) => `${PREFIX}/okr/${id}`,
 	objective: PREFIX + '/objective',
 	objectiveItem: (id) => `${PREFIX}/objective/${id}`,
-
+	keyresultItem: (id) => `${PREFIX}/keyresult/${id}`,
+	todoKeyresult: (id) => `${PREFIX}/todo/${id}/keyresult`,
 }
 
 

@@ -1,7 +1,7 @@
 <view class="container">
 	<view class="title">已经完成的Todos， 你真棒，比金箍棒还棒</view>
 	<view class="todo-list">
-		<view class="todo-item {{item.state === 1? 'accomplish' : ''}}" wx:for="{{todos}}" wx:key="{{index}}" wx:if="{{item.state === 1}}" bindtap="handButton">
+		<view class="todo-item {{item.state === 1? 'accomplish' : ''}}" wx:for="{{todos}}" wx:key="{{index}}" wx:if="{{item.state === 1}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="handButton">
 			<view class="item-title">{{item.content}}</view>
 			<view class="item-created_time"><span>· 创建时间：</span> {{item.start_at}}</view>
 			<view class="item-created_time"><span>· 完成时间：</span> {{item.end_at}}</view>

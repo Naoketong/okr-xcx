@@ -5,7 +5,7 @@ Page({
     todos: [],
   },
   onShow: function() {
-    Todo.index({state: 0}).then(res => {
+    Todo.index().then(res => {
       this.setData({todos: res.todos})
     })
   },
@@ -31,7 +31,6 @@ Page({
           wx.navigateTo({url:'/pages/todo_keyresult/todo_keyresult?id=' + id })
         }else if(tapIndex == 1){
           let end_at = formatTime(new Date())
-          console.log(end_at)
           Todo.update(id,{state:1,end_at:end_at}).then(res=>{
             let todos = this.data.todos;
             todos.splice(index,1)

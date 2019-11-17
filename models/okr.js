@@ -14,6 +14,9 @@ export default {
   update (id, params) {
     return request({ url: API.okrItem(id), method: 'PUT', data: params})
   },
+  show(id) {
+    return request({ url: API.okrItem(id) })
+  },
   delete (id) {
     return request({ url: API.okrItem(id), method: 'DELETE'})
   },
